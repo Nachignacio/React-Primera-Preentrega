@@ -3,6 +3,7 @@ function ItemListContainer({nombre, image, descripcion}){
         height: "500px",
         width: "500px",
         borderStyle: "solid",
+        borderRadius: "15px",
         display: "flex",
         flexDirection: "column",
         textAlign: "center",

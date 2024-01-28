@@ -7,9 +7,20 @@ function ListItem({texto}){
         width: "10vw",
         justifyText: "center",
         textAlign: "center",
+        
     };
+
+    let anchorStyle = {
+        textDecoration: "none",
+        color: "black",
+    };
+
     return(
-        <li style={listStyle}>{texto}</li>
+        <li style={listStyle}>
+            <a href="." style={anchorStyle}>
+                {texto}
+            </a>
+        </li>
     )
 }
 
