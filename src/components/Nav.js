@@ -1,5 +1,6 @@
 import ListItem from "./ListItem";
-import Logo from "../img/pedals.png"
+import Cart from "../img/cart.png";
+import CartCounter from "../img/cartcounter.png";
 
 function Nav(){
     let unorderedStyles = {
@@ -8,26 +9,34 @@ function Nav(){
         backgroundColor: "darkcyan",
     };
 
-    let logoStyles = {
+    let cartStyles = {
         position: "absolute",
-        right: "5vw",
-        height: "75px",
-        width: "75px",
+        top: "95px",
+        right: "20px",
+        height: "50px",
     };
+
+    let shoppedCounterStyles = {
+        position: "absolute",
+        top: "110px",
+        right: "60px",
+        height: "30px",
+    };
+
+    
 
     return (<nav className="App">
                 <ul style={unorderedStyles}>
-                <ListItem texto="Pianos"/>
-                <ListItem texto="Teclados"/>
-                <ListItem texto="Guitarras"/>
-                <ListItem texto="Baterias"/>
-                <li style={{listStyle: "none"}}>
-                    <img src={Logo} alt="logo" style={logoStyles}/>
-                </li>
-            </ul>
-            
-        
-    </nav>)
+                    <ListItem texto="Pianos"/>
+                    <ListItem texto="Teclados"/>
+                    <ListItem texto="Guitarras"/>
+                    <ListItem texto="Baterias"/>
+                    <li style={{listStyle: "none"}}>
+                        <img src={Cart} style={cartStyles} alt="cart"/>
+                        <img src={CartCounter} style={shoppedCounterStyles} alt="cart"/>
+                    </li>
+                </ul>
+            </nav>)
 }
 
 export default Nav;
